@@ -1,0 +1,99 @@
+<?php
+
+$l = "localhost";
+
+$u = "";
+
+$p = "";
+
+$db="notetaking";
+
+$con = mysqli_connect($l,$u,$p,$db);
+
+if (!$con) {
+
+die("not connected: " . mysqli_connect_error());
+
+}
+
+echo "connected";
+?>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        /* Add CSS for the background image */
+        body {
+            background-image: url('LUT campus.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            text-align: center;
+        }
+       .overlay {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        } 
+
+        /* Add CSS for the login form */
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20%;
+        }
+
+        /* Add CSS for form elements */
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 1px solid #333;
+            background: transparent;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #333333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class = "overlay">
+        <img src = "LUT logo.png" alt = "LUT logo">
+
+    </div>
+
+    <div class="login-container">
+        <h1>Online Note Taking</h1>
+        <h2>Login</h2>
+        <form action="your-login-processing-script.php" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>
+

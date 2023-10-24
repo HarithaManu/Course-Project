@@ -1,0 +1,9 @@
+{
+    "name": "to-do-list-app",
+    "version": "1.0.0",
+    "description": "Simple To-Do List Web App",
+   "dependencies": {
+      "express": "^4.17.1"
+   }
+  }
+  
